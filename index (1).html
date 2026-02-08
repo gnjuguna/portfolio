@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>George Njuguna | Full-Stack Developer • AI/ML Integration</title>
+  <meta name="description" content="15+ years building production systems across fintech, e-commerce, and data platforms. Specializing in React, Node.js, and AI/ML integrations.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: #0a0a0a;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      padding: 60px 0;
+    }
+
+    .tag {
+      color: #10b981;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      font-size: clamp(40px, 8vw, 56px);
+      font-weight: 700;
+      letter-spacing: -2px;
+      margin-bottom: 16px;
+    }
+
+    .intro {
+      font-size: 20px;
+      color: #a1a1aa;
+      max-width: 600px;
+      margin-bottom: 32px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      transition: transform 0.2s, opacity 0.2s;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    .btn-primary {
+      background-color: #10b981;
+      color: #000;
+    }
+
+    .btn-secondary {
+      background-color: transparent;
+      color: #fff;
+      border: 1px solid #333;
+    }
+
+    /* Stats */
+    .stats {
+      padding: 40px 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+    }
+
+    .stat-card {
+      background-color: #141414;
+      padding: 32px;
+      border-radius: 12px;
+      border: 1px solid #222;
+    }
+
+    .stat-number {
+      font-size: 40px;
+      font-weight: 700;
+      color: #10b981;
+    }
+
+    .stat-label {
+      color: #71717a;
+      font-size: 14px;
+      margin-top: 4px;
+    }
+
+    /* Sections */
+    section {
+      padding: 60px 0;
+    }
+
+    .section-title {
+      font-size: 14px;
+      color: #10b981;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    /* AI/ML Section */
+    .aiml-grid {
+      background-color: #141414;
+      border-radius: 16px;
+      padding: 40px;
+      border: 1px solid #222;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+    }
+
+    .aiml-item h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .aiml-item p {
+      color: #a1a1aa;
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+
+    .tech-badge {
+      background-color: rgba(16, 185, 129, 0.1);
+      color: #10b981;
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 500;
+      display: inline-block;
+    }
+
+    /* Filter Tabs */
+    .filter-tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 32px;
+    }
+
+    .filter-btn {
+      padding: 8px 20px;
+      border-radius: 6px;
+      border: 1px solid #333;
+      background: transparent;
+      color: #fff;
+      font-weight: 500;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background-color: #10b981;
+      color: #000;
+      border-color: #10b981;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 24px;
+    }
+
+    .project-card {
+      background-color: #141414;
+      border-radius: 12px;
+      padding: 32px;
+      border: 1px solid #222;
+      transition: border-color 0.2s;
+    }
+
+    .project-card:hover {
+      border-color: #333;
+    }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      margin-bottom: 16px;
+    }
+
+    .project-card h3 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    .project-link {
+      color: #10b981;
+      font-size: 14px;
+    }
+
+    .project-card > p {
+      color: #a1a1aa;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .project-card ul {
+      margin: 0 0 16px 16px;
+      padding: 0;
+    }
+
+    .project-card li {
+      color: #71717a;
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .tech-tag {
+      background-color: #1f1f1f;
+      color: #a1a1aa;
+      padding: 4px 10px;
+      border-radius: 4px;
+      font-size: 11px;
+    }
+
+    .project-impact {
+      color: #10b981;
+      font-size: 13px;
+      font-weight: 500;
+      border-top: 1px solid #222;
+      padding-top: 16px;
+    }
+
+    /* Tech Stack */
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+    }
+
+    .tech-category {
+      background-color: #141414;
+      padding: 24px;
+      border-radius: 12px;
+      border: 1px solid #222;
+    }
+
+    .tech-category h3 {
+      font-size: 12px;
+      color: #71717a;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 16px;
+    }
+
+    .tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tech-item {
+      background-color: #1f1f1f;
+      color: #fff;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+    }
+
+    /* CTA Section */
+    .cta {
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    .cta h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .cta p {
+      color: #71717a;
+      margin-bottom: 32px;
+    }
+
+    .cta .btn {
+      padding: 16px 32px;
+      font-size: 16px;
+    }
+
+    /* Footer */
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid #222;
+      text-align: center;
+      color: #71717a;
+      font-size: 14px;
+    }
+
+    /* Hidden class for filtering */
+    .hidden {
+      display: none !important;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .aiml-grid {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="tag">Full-Stack Developer • AI/ML Integration</div>
+      <h1>George Njuguna</h1>
+      <p class="intro">
+        15+ years building production systems across fintech, e-commerce, and data platforms. 
+        Specializing in React, Angular, Node.js, and AI/ML integrations that scale.
+      </p>
+      <div class="buttons">
+        <a href="/cdn-cgi/l/email-protection#f0979e9a8597859e91c8c3b0979d91999cde939f9d" class="btn btn-primary"><span class="__cf_email__" data-cfemail="9cfbf2f6e9fbe9f2fda4afdcfbf1fdf5f0b2fff3f1">[email&#160;protected]</span></a>
+        <a href="https://linkedin.com/in/gnjuguna83" target="_blank" class="btn btn-secondary">LinkedIn</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Stats -->
+  <section>
+    <div class="container stats">
+      <div class="stat-card">
+        <div class="stat-number">15+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">1M+</div>
+        <div class="stat-label">Users Scaled To</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">20+</div>
+        <div class="stat-label">API Integrations</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">5+</div>
+        <div class="stat-label">AI/ML Projects</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI/ML Section -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">AI/ML Integration Experience</h2>
+      <div class="aiml-grid">
+        <div class="aiml-item">
+          <h3>Computer Vision (KYC)</h3>
+          <p>Integrated Google Vision API for automated ID document extraction and verification. Reduced manual KYC processing from hours to seconds.</p>
+          <span class="tech-badge">Google Vision API</span>
+        </div>
+        <div class="aiml-item">
+          <h3>Conversational AI</h3>
+          <p>Built Dialogflow-powered chatbot for customer support automation. Handled loan status queries, FAQs, and escalation workflows.</p>
+          <span class="tech-badge">Dialogflow</span>
+        </div>
+        <div class="aiml-item">
+          <h3>ML Credit Scoring</h3>
+          <p>Integrated credit bureau APIs and built risk assessment models for real-time lending decisions on 1M+ loan applications.</p>
+          <span class="tech-badge">TransUnion, Metropol APIs</span>
+        </div>
+        <div class="aiml-item">
+          <h3>Real-Time Data Pipelines</h3>
+          <p>Built data ingestion pipelines processing live feeds from 15+ providers (sports, weather, crypto) for blockchain oracle platform.</p>
+          <span class="tech-badge">Node.js, Event-Driven</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">Selected Projects</h2>
+      
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="ai">AI/ML</button>
+        <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Okolea -->
+        <div class="project-card" data-category="ai">
+          <div class="project-header">
+            <h3>Okolea Digital Lending</h3>
+          </div>
+          <p>Scaled digital lending platform to 1M+ users with AI-powered identity verification and automated customer support.</p>
+          <ul>
+            <li>Integrated Google Vision API for automated ID verification (KYC)</li>
+            <li>Built Dialogflow chatbot reducing support tickets by 40%</li>
+            <li>ML-based credit scoring using bureau data</li>
+          </ul>
+          <div class="tech-tags">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">Google Vision API</span>
+            <span class="tech-tag">Dialogflow</span>
+          </div>
+          <div class="project-impact">1M+ users, 8% → 1% failure rate</div>
+        </div>
+
+        <!-- KIX -->
+        <div class="project-card" data-category="fullstack">
+          <div class="project-header">
+            <h3>KIX Sports Exchange</h3>
+            <a href="https://test.kix.digital" target="_blank" class="project-link">↗</a>
+          </div>
+          <p>Real-time sports NFT marketplace with live data feeds and event-driven architecture.</p>
+          <ul>
+            <li>Real-time sports data from multiple API providers</li>
+            <li>Event-driven transaction processing</li>
+            <li>SSR for SEO and performance</li>
+          </ul>
+          <div class="tech-tags">
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">TypeScript</span>
+          </div>
+          <div class="project-impact">Live in UK market</div>
+        </div>
+
+        <!-- Ustadi -->
+        <div class="project-card" data-category="fullstack">
+          <div class="project-header">
+            <h3>Ustadi E-Learning</h3>
+            <a href="https://ustadi-prod.web.app" target="_blank" class="project-link">↗</a>
+          </div>
+          <p>Primary school STEM learning platform with progress tracking and interactive assessments.</p>
+          <ul>
+            <li>Student progress tracking and analytics</li>
+            <li>Interactive quizzes and content delivery</li>
+            <li>Role-based access for students and teachers</li>
+          </ul>
+          <div class="tech-tags">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">Cloud Functions</span>
+            <span class="tech-tag">Firestore</span>
+          </div>
+          <div class="project-impact">Serving Kenyan schools</div>
+        </div>
+
+        <!-- Gora -->
+        <div class="project-card" data-category="ai">
+          <div class="project-header">
+            <h3>Gora Data Feeds</h3>
+          </div>
+          <p>Blockchain oracle data platform integrating 15+ external APIs for aviation, weather, sports, and crypto markets.</p>
+          <ul>
+            <li>15+ third-party API integrations</li>
+            <li>Real-time data pipelines for live events</li>
+            <li>Asymmetric authentication for data integrity</li>
+          </ul>
+          <div class="tech-tags">
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">REST APIs</span>
+            <span class="tech-tag">Webhooks</span>
+          </div>
+          <div class="project-impact">Processing millions of data points</div>
+        </div>
+
+        <!-- ForLiving -->
+        <div class="project-card" data-category="fullstack">
+          <div class="project-header">
+            <h3>ForLiving Rentals</h3>
+          </div>
+          <p>Airbnb-style property rental marketplace for the Kenyan market.</p>
+          <ul>
+            <li>Booking engine with real-time availability</li>
+            <li>Host dashboard for property management</li>
+            <li>M-Pesa payment integration</li>
+          </ul>
+          <div class="tech-tags">
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Firebase</span>
+            <span class="tech-tag">M-Pesa API</span>
+          </div>
+          <div class="project-impact">Live in Kenya</div>
+        </div>
+
+        <!-- Eneza -->
+        <div class="project-card" data-category="fullstack">
+          <div class="project-header">
+            <h3>Eneza Malipo</h3>
+          </div>
+          <p>Mobile payments platform for agricultural payroll disbursements.</p>
+          <ul>
+            <li>USSD interface for feature phones</li>
+            <li>Automated salary disbursements</li>
+            <li>Real-time reconciliation workflows</li>
+          </ul>
+          <div class="tech-tags">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">USSD</span>
+            <span class="tech-tag">M-Pesa API</span>
+          </div>
+          <div class="project-impact">Serving agricultural workers</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">Tech Stack</h2>
+      <div class="tech-grid">
+        <div class="tech-category">
+          <h3>Frontend</h3>
+          <div class="tech-list">
+            <span class="tech-item">React</span>
+            <span class="tech-item">Next.js</span>
+            <span class="tech-item">React Native</span>
+            <span class="tech-item">TypeScript</span>
+            <span class="tech-item">Angular</span>
+            <span class="tech-item">Tailwind CSS</span>
+          </div>
+        </div>
+        <div class="tech-category">
+          <h3>Backend</h3>
+          <div class="tech-list">
+            <span class="tech-item">Node.js</span>
+            <span class="tech-item">Python</span>
+            <span class="tech-item">TypeScript</span>
+            <span class="tech-item">Express.js</span>
+            <span class="tech-item">REST APIs</span>
+            <span class="tech-item">GraphQL</span>
+          </div>
+        </div>
+        <div class="tech-category">
+          <h3>Cloud</h3>
+          <div class="tech-list">
+            <span class="tech-item">AWS Lambda</span>
+            <span class="tech-item">Firebase</span>
+            <span class="tech-item">GCP</span>
+            <span class="tech-item">DynamoDB</span>
+            <span class="tech-item">Firestore</span>
+            <span class="tech-item">PostgreSQL</span>
+          </div>
+        </div>
+        <div class="tech-category">
+          <h3>AI/ML</h3>
+          <div class="tech-list">
+            <span class="tech-item">Google Vision API</span>
+            <span class="tech-item">Dialogflow</span>
+            <span class="tech-item">ML Credit Scoring</span>
+            <span class="tech-item">Data Pipelines</span>
+            <span class="tech-item">Analytics</span>
+          </div>
+        </div>
+        <div class="tech-category">
+          <h3>DevOps</h3>
+          <div class="tech-list">
+            <span class="tech-item">CI/CD</span>
+            <span class="tech-item">GitHub Actions</span>
+            <span class="tech-item">Docker</span>
+            <span class="tech-item">Vercel</span>
+            <span class="tech-item">Firebase Hosting</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <h2>Let's Build Something</h2>
+      <p>Available for full-stack development with AI/ML integration</p>
+      <a href="/cdn-cgi/l/email-protection#0f6861657a687a616e373c4f68626e6663216c6062" class="btn btn-primary">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      George Njuguna • Nairobi, Kenya • <span id="year"></span>
+    </div>
+  </footer>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Filter functionality
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // Update active button
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+
+        // Filter projec
